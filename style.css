@@ -1,0 +1,25 @@
+.hero-section{
+    background:linear-gradient(360deg, #ff4954, #f2295b);
+    color: #fff;
+
+}
+
+.logo-container {
+    background-color: #fff ; 
+    padding: 20px;
+    /* margin-left: 15px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px; 
+}
+
+.logo {
+    margin: 0 15px; /* Space between logos */
+    width: 100px; /* Adjust size as needed */
+    transition: transform 0.3s ease-in-out; /* Animation effect */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
