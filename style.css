@@ -4,6 +4,50 @@
   box-sizing: border-box;
 }
 
+/* Fixed Header */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px; /* Adjust padding for spacing */
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+
+.header-logo .logo {
+  height: 50px; /* Adjust logo size as necessary */
+}
+
+.header-nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav li a {
+  text-decoration: none;
+  color: #000; /* Customize as needed */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.header-nav li a:hover {
+  color: #ff4954; /* Change color on hover */
+}
+
+/* Offset for header height to avoid overlapping */
+body {
+  padding-top: 80px;
+}
+
+
 .company_name{
   margin: 5%;
   color: #fff;
@@ -16,7 +60,7 @@
 .hero-section {
   background: linear-gradient(360deg, #ff4954, #f2295b);
   color: #fff;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 .img-container {
@@ -30,7 +74,7 @@
 }
 .container {
   margin-left: 3%;
-  margin-bottom: 10%;
+  /* margin-bottom: 10%; */
 }
 .f {
   font-size: 52px;
@@ -46,10 +90,18 @@
   transform: scale(1.1); /* Zoom effect on hover */
 }
 
-.Membership_Accolades h3 {
+/* .Membership_Accolades h3 {
   margin: 0 0 20px;
   color: #554f67;
 }
+
+
+.member_images {
+  margin-top: 3%;
+}
+.Membership_Accolades {
+  margin: 5%;
+} */
 
 .intro {
   color: #fff;
@@ -58,13 +110,6 @@
   text-transform: none;
   line-height: 68px;
   letter-spacing: 0px;
-}
-
-.member_images {
-  margin-top: 3%;
-}
-.Membership_Accolades {
-  margin: 5%;
 }
 
 .features_head h2 {
@@ -132,6 +177,7 @@
 
 .features {
   background-color: #fff4f4;
+  margin-top:5px;
 }
 .reason_header {
   text-align: center;
@@ -327,7 +373,7 @@
 
 
 
-.d-flex.justify-content-end {
+.justify-content-end {
   position: fixed; /* Make the entire form container fixed */
   top: 50%; /* Center vertically */
   right: 0; /* Stick to the right edge */
@@ -367,3 +413,49 @@ textarea {
   resize: vertical;
 }
 
+
+/* Default padding for larger screens */
+body {
+  padding-top: 80px; /* Offset for the header height */
+}
+
+/* Reduce padding for smaller screens */
+@media (max-width: 1400px) {
+  body {
+    padding-top: 100px; /* Increase padding to prevent overlap */
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    padding-top: 120px;
+  }
+}
+
+
+@media (max-width: 1400px) {
+  .d-flex.justify-content-end {
+    top: 55%; 
+  }
+}
+
+@media (max-width: 1200px) {
+  .d-flex.justify-content-end {
+    top: 60%; /* Move down further for overlap prevention */
+  }
+}
+
+
+@media (max-width: 1400px) {
+  .fixed-header {
+    padding: 10px 15px; /* Reduce padding to make the header less tall */
+  }
+
+  .header-logo .logo {
+    height: 40px; /* Reduce logo size */
+  }
+
+  .header-nav li a {
+    font-size: 0.9rem; /* Reduce font size of nav links */
+  }
+}
